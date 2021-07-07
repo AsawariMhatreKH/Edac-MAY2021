@@ -58,7 +58,7 @@ and salary > 10000;
 
 13.Write a query to display department name, name (first_name, last_name), hire date, salary of the manager for all managers whose experience is more than 15 years.
 select department_name,first_name, last_name,hire_date,salary from departments,employees where departments.department_id=employees.department_id
-and employees.employee-id=departments.manager_id and (sysdate()- hire_date)>(15*365);
+and employees.employee-id=departments.manager_id and ((sysdate()- hire_date)/365)>15;
 
 
 
